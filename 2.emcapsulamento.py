@@ -3,9 +3,7 @@ os.system("cls || clear")  # Limpar terminal
 
 # Criando sua própria exceção
 class SaldoInsuficienteError(Exception):
-    def __init__(self, mensagem):
-        self.mensagem = mensagem
-        super().__init__(self.mensagem)
+    pass
 
 class ValorNegativoError(Exception):
     pass 
@@ -39,7 +37,7 @@ class Conta:
         except ValorNegativoError as erro:
             return f"Erro: {erro}"
         
-        def__verificar_depositar(self, valor):
+    def _verificar_depositar(self, valor):
         if valor < 0:
             raise ValorNegativoError("Não é possovel depositar valor negati")
         
